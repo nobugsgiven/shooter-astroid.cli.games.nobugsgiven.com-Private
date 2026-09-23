@@ -270,8 +270,8 @@ internal sealed class Game
     {
         int width = _renderer.Width;
 
-        const string company = "★ NO BUGS GIVEN";
-        const string division = " GAMES ★";
+        const string company = "★ NO BUGS GIVEN ★ ";
+        const string division = "GAMES";
         const string title = "ASTEROID SHOOTER";
         // Anchored to the right edge of the *current* window width.
         string score = "SCORE: " + _score.ToString("D6");
