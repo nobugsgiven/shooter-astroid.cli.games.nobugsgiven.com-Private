@@ -106,7 +106,7 @@ jobs:
         run: |
           mkdir -p ./artifacts
           if [[ "${{ matrix.rid }}" == win* ]]; then
-            zip -j ./artifacts/ShooterAstroidConsole-${{ matrix.rid }}.zip ./publish/ShooterAstroidConsole${{ matrix.ext }}
+            powershell -Command "Compress-Archive -Path './publish/ShooterAstroidConsole${{ matrix.ext }}' -DestinationPath './artifacts/ShooterAstroidConsole-${{ matrix.rid }}.zip'"
           else
             chmod +x ./publish/ShooterAstroidConsole
             tar -czf ./artifacts/ShooterAstroidConsole-${{ matrix.rid }}.tar.gz -C ./publish ShooterAstroidConsole
